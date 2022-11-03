@@ -8,6 +8,11 @@ require("./utils/auth/index");
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+const { checkApiKey } = require("./middlewares/auth.handler");
+app.get("/apiKey", checkApiKey, (req, res) => {
+  res.json({ message: "hola mundo" });
+});
+
 const routes = require("./routes/index.js");
 routes(app);
 

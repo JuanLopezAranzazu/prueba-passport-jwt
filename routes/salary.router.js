@@ -12,7 +12,7 @@ const {
 } = require("../schemas/salary.schema");
 
 const validatorHandler = require("../middlewares/validator.handler");
-const { checkRoles } = require("../middlewares/auth.handler");
+const { checkRoles, checkApiKey } = require("../middlewares/auth.handler");
 
 const { models } = require("./../libs/sequelize");
 

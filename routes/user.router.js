@@ -14,7 +14,7 @@ const {
 } = require("../schemas/user.schema");
 
 const validatorHandler = require("../middlewares/validator.handler");
-const { checkRoles } = require("../middlewares/auth.handler");
+const { checkRoles, checkApiKey } = require("../middlewares/auth.handler");
 
 const inputDataExclude = ["password"];
 
