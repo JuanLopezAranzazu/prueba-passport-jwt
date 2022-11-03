@@ -1,0 +1,63 @@
+GET http://localhost:3001/api/v1/users
+
+###
+
+GET http://localhost:3001/api/v1/users/his
+
+###
+
+GET http://localhost:3001/api/v1/users/filter?role=customer
+
+###
+
+GET http://localhost:3001/api/v1/users/1
+
+###
+
+POST  http://localhost:3001/api/v1/users
+Content-Type: application/json
+
+{
+  "fullname": "user3",
+  "username": "username3",
+  "password": "root1234",
+  "role": "customer"
+}
+
+###
+
+PUT http://localhost:3001/api/v1/users/1
+Content-Type: application/json
+
+{
+  "fullname": "my update",
+  "username": "my update",
+  "password": "Root1234",
+  "role": "admin"
+}
+
+###
+
+POST  http://localhost:3001/api/v1/auth
+Content-Type: application/json
+
+{
+  "username": "username1",
+  "password": "root1234"
+}
+
+###
+
+GET  http://localhost:3001/api/v1/salaries
+
+###
+
+POST  http://localhost:3001/api/v1/salaries
+Content-Type: application/json
+
+{
+  "value": 890900,
+  "startDate": "2022-01-09",
+  "endDate": "2022-12-09",
+  "userId": 1
+}
